@@ -24,12 +24,13 @@ export const App = () => {
         {selectedGood ? `${selectedGood}  is selected` : 'No goods selected'}
       </h1>
       {selectedGood && (
+        // eslint-disable-next-line react/self-closing-comp
         <button
           data-cy="ClearButton"
           type="button"
           className="delete ml-3"
           onClick={() => setSelectedGood('')}
-        />
+        ></button>
       )}
       <table className="table">
         <tbody>
@@ -72,4 +73,3 @@ export const App = () => {
     </main>
   );
 };
-
